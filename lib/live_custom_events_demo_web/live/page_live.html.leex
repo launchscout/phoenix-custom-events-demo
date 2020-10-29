@@ -1,6 +1,6 @@
 
 <div class="map">
-  <lit-google-map api-key="" phx-hook="PhoenixCustomEvent" phx-custom-event-bounds_changed="bounds_changed">
+  <lit-google-map api-key="" phx-hook="PhoenixCustomEvent" phx-custom-event-bounds_changed="bounds_changed" phx-custom-event-tilesloaded="bounds_changed">
     <%= for %{geo_location: %Geo.Point{coordinates: {lng, lat}}, name: name, ident: ident} <- @airports do %>
       <lit-google-map-marker slot="markers" latitude="<%= lat %>" longitude="<%= lng %>">
         <p><%= name %> (<%= ident %>)</p>
