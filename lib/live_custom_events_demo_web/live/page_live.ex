@@ -4,7 +4,7 @@ defmodule LiveCustomEventsDemoWeb.PageLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, airports: [])}
+    {:ok, assign(socket, airports: [], api_key: System.get_env("API_KEY"))}
   end
 
   @impl true
